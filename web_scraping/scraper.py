@@ -1,8 +1,9 @@
 import requests
 from urllib.parse import urlparse, urljoin
 from bs4 import BeautifulSoup
-  
-def get_pdf_links(url):
+ 
+BASE_URL = "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos"
+def get_pdf_links(url=BASE_URL):
     #Extrai os links dos pdf's anexo I e II da URL passada nos parametros
     
     try:
@@ -26,8 +27,7 @@ def get_pdf_links(url):
         return []
     
 if __name__ == '__main__':
-    base_url = "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos"
-    links = get_pdf_links(base_url)
+    links = get_pdf_links()
     print(links)
     
         
