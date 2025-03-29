@@ -1,9 +1,10 @@
 import os
 import requests
 import tqdm
-from config import DOWNLOAD_FOLDER
+from web_scraping import get_pdf_links
 
-def downloader(pdf_links, save_path=DOWNLOAD_FOLDER):
+download_folder = "../../teste_de_nivelamento/downloads"
+def pdf_downloader(pdf_links, save_path=download_folder):
     
     # Baixa arquivos PDF de uma lista de URLs e os salva em um diretório especificado.
 
@@ -33,8 +34,5 @@ def downloader(pdf_links, save_path=DOWNLOAD_FOLDER):
     print("Download concluído!")  # Mensagem de conclusão
     
 if __name__ == "__main__":
-    test_pdf_links = [
-        "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-        "https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdf_reference_archive/PDFReference.pdf",
-    ]
-    downloader(test_pdf_links)
+   
+    pdf_downloader(get_pdf_links())
