@@ -1,0 +1,13 @@
+
+[api_vue]
+
+[banco_dados]
+
+[transformacao_dados]
+
+[web_scraping]
+requests
+beautifulsoup4
+tqdm
+pytest
+pytest-cov

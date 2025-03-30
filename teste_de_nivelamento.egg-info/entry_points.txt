@@ -1,0 +1,4 @@
+[console_scripts]
+web_scraping_download = web_scraping.downloader:pdf_downloader
+web_scraping_integrate = integration.integration:main
+web_scraping_scraper = web_scraping.scraper:get_pdf_links

@@ -1,7 +1,7 @@
 import os
 import requests
 import tqdm
-from web_scraping import get_pdf_links
+from .scraper import get_pdf_links
 
 download_folder = "../../teste_de_nivelamento/downloads"
 def pdf_downloader(pdf_links, save_path=download_folder):

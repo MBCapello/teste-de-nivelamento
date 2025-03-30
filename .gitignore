@@ -1,0 +1,31 @@
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+develop-eggs/
+sdist/
+
+# IDE files
+.idea/
+*.swp
+*.swo
+.vscode/
+
+# OS generated files
+.DS_Store
+
+# Virtual environment
+venv/
+
+# output directory
+output/
+
+# Download directory
+downloads/
+
+# Zip files
+*.zip
