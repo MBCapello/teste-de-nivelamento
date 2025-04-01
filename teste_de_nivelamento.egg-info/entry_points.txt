@@ -1,4 +1,6 @@
 [console_scripts]
-web_scraping_download = web_scraping.downloader:pdf_downloader
-web_scraping_integrate = integration.integration:main
-web_scraping_scraper = web_scraping.scraper:get_pdf_links
+main_banco_dados = banco_dados.main:main
+main_integrate = integration.integration:main
+main_transformacao_dados = transformacao_dados.main:main
+main_web_scraping = web_scraping.main:main
+

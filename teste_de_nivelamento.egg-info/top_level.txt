@@ -1,2 +1,4 @@
+banco_dados
 integration
+transformacao_dados
 web_scraping

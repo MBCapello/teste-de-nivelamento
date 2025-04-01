@@ -3,12 +3,20 @@ import requests
 import tqdm
 from .scraper import get_pdf_links
 
-download_folder = "../../teste_de_nivelamento/downloads"
-def pdf_downloader(pdf_links, save_path=download_folder):
-    
-    # Baixa arquivos PDF de uma lista de URLs e os salva em um diretório especificado.
+# Garante que o download_folder seja um caminho absoluto e esteja correto.
+download_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), "../output/download"))
 
-    os.makedirs(save_path, exist_ok=True)  # Cria o diretório se ele não existir
+def pdf_downloader(pdf_links, save_path=download_folder):
+    """
+    Baixa arquivos PDF de uma lista de URLs e os salva em um diretório especificado.
+    """
+
+    try:
+        os.makedirs(save_path, exist_ok=True)  # Cria o diretório se ele não existir
+    except OSError as e:
+        print(f"Erro ao criar o diretório {save_path}: {e}")
+        return  # Interrompe o download se o diretório não puder ser criado
+
     for pdf in pdf_links:
         pdf_name = os.path.join(save_path, pdf.split("/")[-1])  # Obtém o nome do arquivo da URL
         try:
@@ -31,8 +39,7 @@ def pdf_downloader(pdf_links, save_path=download_folder):
         except Exception as e:
             print(f"Erro inesperado ao baixar {pdf_name}: {e}")  # Trata outros erros
 
-    print("Download concluído!")  # Mensagem de conclusão
-    
+    print("Download concluído!")
+
 if __name__ == "__main__":
-   
     pdf_downloader(get_pdf_links())

@@ -1,13 +1,14 @@
-Metadata-Version: 2.4
-Name: teste_de_nivelamento
+Metadata-Version: 2.1
+Name: teste-de-nivelamento
 Version: 0.1.0
-Provides-Extra: web-scraping
-Requires-Dist: requests; extra == "web-scraping"
-Requires-Dist: beautifulsoup4; extra == "web-scraping"
-Requires-Dist: tqdm; extra == "web-scraping"
-Requires-Dist: pytest; extra == "web-scraping"
-Requires-Dist: pytest-cov; extra == "web-scraping"
-Provides-Extra: transformacao-dados
-Provides-Extra: banco-dados
-Provides-Extra: api-vue
-Dynamic: provides-extra
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: web_scraping
+Provides-Extra: transformacao_dados
+Provides-Extra: banco_dados
+Provides-Extra: api_vue
+
+UNKNOWN
+
